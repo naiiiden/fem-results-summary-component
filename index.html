@@ -8,8 +8,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+  <style>
+    h1 {
+      color: #2e2be9
+    }
+  </style>
   <main>
-    <div>
+    <div class="result-grade-container bg-gradient-to-b from-[#7857ff] to-[#2e2be9]">
       <h1>Your result</h1>
       <p class="result">
         76
@@ -17,24 +22,52 @@
         <span>of 100</span>
       </p>
       <p class="grade">Great</p>
-      <p class="grade-description">You scored higher than 65% of the people who have taken these tests.></p>
+      <p class="grade-description">You scored higher than 65% of the people who have taken these tests.</p>
     </div>
     <div>
       <h2>Summary</h2>
       <div>
+        <img src="" class="category"/>
         Reaction
+        <p class="category-title">
+
+        </p>
+        <span class="category-score">
+
+        </span>
         80 / 100
       </div>
       <div>
+        <img src="" class="category"/>
         Memory
+        <p class="category-title">
+
+        </p>
+        <span class="category-score">
+
+        </span>
         92 / 100
       </div>
       <div>
+        <img src="" class="category"/>
         Verbal
+        <p class="category-title">
+
+        </p>
+        <span class="category-score">
+
+        </span>
         61 / 100
       </div>
       <div>
+        <img src="" class="category"/>
         Visual
+        <p class="category-title">
+
+        </p>
+        <span class="category-score">
+
+        </span>
         72 / 100
       </div>
       <button class="">Continue</button>
@@ -44,7 +77,10 @@
     fetch("data.json")
       .then(res => res.json())
       .then(data => {
-        console.log(data) 
+        console.log(data[0])
+        console.log(data[1])  
+        console.log(data[2])  
+        console.log(data[3])  
       })
   </script>
 </body>
