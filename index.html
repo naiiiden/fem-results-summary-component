@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Results summary component</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+    
+    * {
+      font-family: Hanken Grotesk !important;
+    }
+  </style>
 </head>
 <body>
   <main>
@@ -17,7 +24,7 @@
         <!-- result is calculated by adding all the scores and dividing by the scores number i.e: (80+92+61+72) / 4 or data.json length -->
         <span class="text-base text-[#c8c7ff]">of 100</span>
       </p>
-      <p class="grade text-white">Great</p>
+      <p class="grade text-white text-2xl">Great</p>
       <p class="grade-description text-[#c8c7ff]">You scored higher than 65% of the people who have taken these tests.</p>
     </div>
     <div>
