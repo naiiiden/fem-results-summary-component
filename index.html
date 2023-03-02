@@ -4,25 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Results summary component</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <style>
-    h1 {
-      color: #2e2be9
-    }
-  </style>
   <main>
-    <div class="result-grade-container bg-gradient-to-b from-[#7857ff] to-[#2e2be9]">
-      <h1>Your result</h1>
-      <p class="result">
+    <div class="result-grade-container bg-gradient-to-b from-[#7857ff] to-[#2e2be9] text-center py-8 rounded-b-[2.5rem]">
+      <h1 class="text-[#c8c7ff]">Your Result</h1>
+      <p class="result bg-gradient-to-b from-[#4e21ca] to-[#2421ca00] rounded-full shadow-inner w-32 h-32 text-white text-2xl flex flex-col items-center justify-center mx-auto my-6 text-5xl">
         76
         <!-- result is calculated by adding all the scores and dividing by the scores number i.e: (80+92+61+72) / 4 or data.json length -->
-        <span>of 100</span>
+        <span class="text-base text-[#c8c7ff]">of 100</span>
       </p>
-      <p class="grade">Great</p>
-      <p class="grade-description">You scored higher than 65% of the people who have taken these tests.</p>
+      <p class="grade text-white">Great</p>
+      <p class="grade-description text-[#c8c7ff]">You scored higher than 65% of the people who have taken these tests.</p>
     </div>
     <div>
       <h2>Summary</h2>
