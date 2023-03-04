@@ -28,52 +28,7 @@
     </div>
     <div class="p-8 flex flex-col justify-between my-auto h-full">
       <h2 class="text-[1.125rem] font-semibold text-[#303b5a] md:text-[1.25rem]">Summary</h2>
-      <div class="h-full flex flex-col justify-between my-5">
-        <div>
-          <img src="" class="category"/>
-          Reaction
-          <p class="category-title">
-  
-          </p>
-          <span class="category-score">
-  
-          </span>
-          80 / 100
-        </div>
-        <div>
-          <img src="" class="category"/>
-          Memory
-          <p class="category-title">
-  
-          </p>
-          <span class="category-score">
-  
-          </span>
-          92 / 100
-        </div>
-        <div>
-          <img src="" class="category"/>
-          Verbal
-          <p class="category-title">
-  
-          </p>
-          <span class="category-score">
-  
-          </span>
-          61 / 100
-        </div>
-        <div>
-          <img src="" class="category"/>
-          Visual
-          <p class="category-title">
-  
-          </p>
-          <span class="category-score">
-  
-          </span>
-          72 / 100
-        </div>
-      </div>
+      <div class="category-container h-full flex flex-col justify-between my-5"></div>
       <button class="bg-[#303b5a] text-white font-semibold text-[1.125rem] rounded-3xl py-2.5 hover:bg-gradient-to-b from-[#7857ff] to-[#2e2be9] focus:outline-offset-4 transition-all">Continue</button>
     </div>
   </main>
@@ -81,11 +36,16 @@
     fetch("data.json")
       .then(res => res.json())
       .then(data => {
-        console.log(data[0])
-        console.log(data[1])  
-        console.log(data[2])  
-        console.log(data[3])  
-      })
+        const category = document.createElement("div");
+        category.innerHTML = data.map(item => `
+          <div>
+            <img src="${item.icon}" alt="${item.category}">
+            <p>${item.category}</p>
+            <p>${item.score}</p>  
+          </div>
+        `).join("");
+        document.querySelector(".category-container").appendChild(category);
+      });
   </script>
 </body>
 </html>
