@@ -11,6 +11,9 @@
 
     * {
       font-family: Hanken Grotesk !important;
+      /* color: #303b5a; */
+      /* color: #ebf1ff; */
+      /* color: #c8c7ff; */
     }
   </style>
 </head>
@@ -49,10 +52,10 @@
         const categoryContainer = document.querySelector(".category-container");
         
         categoryContainer.innerHTML = data.map(category => `
-          <div class="category flex category-${category.category.toLowerCase()}">
+          <div style="border: 1px solid red" class="category flex p-3 gap-3 justify-between rounded-xl category-${category.category.toLowerCase()}">
             <img src="${category.icon}" alt="${category.category}">
-            <p>${category.category}</p>
-            <p>${category.score} <span>/ 100</span></p>  
+            <p class="mr-auto">${category.category}</p>
+            <p class="font-semibold text-[#303b5a]">${category.score} <span class="text-[#989697]">/ 100</span></p>  
           </div>
         `).join("");        
       });
