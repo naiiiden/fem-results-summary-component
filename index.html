@@ -46,17 +46,17 @@
         
         document.querySelector(".result").textContent = totalResult;
 
-        const category = document.createElement("div");
+        const categoryContainer = document.createElement("div");
         
-        category.innerHTML = data.map(item => `
-          <div>
-            <img src="${item.icon}" alt="${item.category}">
-            <p>${item.category}</p>
-            <p>${item.score}</p>  
+        categoryContainer.innerHTML = data.map(category => `
+          <div class="category category-${category.category.toLowerCase()}">
+            <img src="${category.icon}" alt="${category.category}">
+            <p>${category.category}</p>
+            <p>${category.score} <span>/ 100</span></p>  
           </div>
         `).join("");
         
-        document.querySelector(".category-container").appendChild(category);
+        document.querySelector(".category-container").appendChild(categoryContainer);
       });
   </script>
 </body>
